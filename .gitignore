@@ -1,6 +1,28 @@
-# Test artifacts
-tests/*.log
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+.Spotlight-V100
+.Trashes
+
+# Editors
+.idea/
+*.swp
+*.swo
+.vscode/settings.json
+
+# Node
+node_modules/
+
+# Logs
 *.log
 
-# Sensitive configs - never commit
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Sensitive configs
 .ngrok2/
