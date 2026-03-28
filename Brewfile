@@ -1,0 +1,23 @@
+# Formulas
+brew "git"
+brew "gh"
+brew "nvm"
+brew "pnpm"
+brew "starship"
+brew "wget"
+brew "yadm"
+brew "zsh-autosuggestions"
+brew "ffmpeg"
+brew "imagemagick"
+brew "mole"
+
+# Casks
+cask "docker"
+cask "docker-desktop"
+cask "font-fira-code-nerd-font"
+cask "font-hack-nerd-font"
+cask "ghostty"
+cask "obsidian"
+cask "raycast"
+cask "visual-studio-code"
+cask "zed"
