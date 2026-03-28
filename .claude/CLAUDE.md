@@ -115,3 +115,15 @@ When encountering tool failures:
 - Build competence with development tools rather than avoiding them
 
 Quality tools are guardrails that help you, not barriers that block you.
+
+# Tools & Preferences
+
+## GitHub
+
+- Always use the `gh` CLI for GitHub-related tasks (issues, PRs, releases, repo info, CI checks, etc.)
+- Do not use web URLs or direct API calls when `gh` can do the job
+
+## Memory
+
+- Save memories proactively whenever something worth remembering comes up — preferences, decisions, project context, feedback. Don't be conservative about it.
+- If MEMORY.md approaches 150+ lines or feels hard to navigate, raise switching to the memory MCP server (`@modelcontextprotocol/server-memory`) as a knowledge graph alternative.
