@@ -116,6 +116,10 @@ When encountering tool failures:
 
 Quality tools are guardrails that help you, not barriers that block you.
 
+# File Conventions
+
+- Save screenshots, screen recordings, and media output files to `~/Screenshots`
+
 # Tools & Preferences
 
 ## GitHub

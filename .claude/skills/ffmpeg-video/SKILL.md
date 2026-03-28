@@ -5,6 +5,10 @@ description: Use when asked to optimize video, compress video, convert video to 
 
 # ffmpeg Video Processing
 
+## Output Location
+
+Save output files to `~/Screenshots` unless specified otherwise.
+
 ## Quick Reference
 
 ### Optimize / Compress Video
