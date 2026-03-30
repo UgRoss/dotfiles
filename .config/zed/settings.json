@@ -10,9 +10,36 @@
   "edit_predictions": {
     "provider": "copilot",
   },
-  "theme": "Ayu Mirage",
+  "formatter": [
+    {
+      "code_action": "sourse.fixAll.eslint",
+    },
+    "prettier",
+  ],
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Mirage",
+    "dark": "Ayu Mirage",
+  },
   "buffer_font_size": 16,
   "buffer_line_height": {
     "custom": 2,
+  },
+  "agent_servers": {
+    "claude-acp": {
+      "type": "registry",
+    },
+  },
+  "language_models": {
+    // Work Profile
+    "bedrock": {
+      "authentication_method": "named_profile",
+      "region": "us-east-1",
+      "profile": "cg-bedrock",
+    },
+  },
+  "terminal": {
+    "line_height": "comfortable",
+    "font_family": "JetBrainsMono Nerd Font",
   },
 }
