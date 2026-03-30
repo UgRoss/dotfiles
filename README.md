@@ -71,6 +71,18 @@ Install plugins from the Claude Code command palette (`/plugins`):
 | `skill-creator` | `claude-plugins-official` |
 | `obsidian` | `kepano/obsidian-skills` |
 
+## Per-machine Overrides
+
+These files are not tracked — create them locally on each machine as needed:
+
+**`~/.zshrc.local`** — machine-specific shell config (work aliases, internal tools, etc.)
+
+**`~/.gitconfig.local`** — override git identity per machine:
+```ini
+[user]
+    email = you@work.com
+```
+
 ## Structure
 
 Files are stored relative to `$HOME`. yadm maps them directly — `.zshrc` in the repo lives at `~/.zshrc`.
