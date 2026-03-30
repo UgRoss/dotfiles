@@ -14,5 +14,8 @@ export NVM_DIR="$HOME/.nvm"
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
 
+# Local overrides (not tracked in dotfiles)
+[ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
+
 # Starship prompt (keep last)
 eval "$(starship init zsh)"
