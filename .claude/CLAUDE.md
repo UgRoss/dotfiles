@@ -76,6 +76,15 @@
 
 # Git
 
+## Preserving Git History
+
+- ALWAYS use `git mv` (not `mv`) when renaming or moving files/directories. Plain `mv` loses history; `git mv` tracks it as a rename.
+
+## Commit Message Format
+
+- NEVER add "Co-Authored-By" tags or attribution to commit messages
+- Keep commit messages clean and focused on the change itself
+
 ## Pre-Commit Failure Protocol
 
 When pre-commit hooks fail, you MUST follow this exact sequence before any commit attempt:
