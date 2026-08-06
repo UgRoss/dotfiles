@@ -83,6 +83,12 @@ These files are not tracked — create them locally on each machine as needed:
     email = you@work.com
 ```
 
+**Excluding tracked files on a specific machine** — to stop a tracked file from being overwritten by `yadm pull` (e.g. skip syncing `.claude/settings.json` on a work machine):
+```sh
+yadm update-index --skip-worktree .claude/settings.json
+```
+Undo with `yadm update-index --no-skip-worktree .claude/settings.json`.
+
 ## Structure
 
 Files are stored relative to `$HOME`. yadm maps them directly — `.zshrc` in the repo lives at `~/.zshrc`.
