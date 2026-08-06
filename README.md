@@ -71,6 +71,23 @@ Install plugins from the Claude Code command palette (`/plugins`):
 | `skill-creator` | `claude-plugins-official` |
 | `obsidian` | `kepano/obsidian-skills` |
 
+Some skills are installed via [`npx skills`](https://github.com/vercel-labs/skills) instead of the plugin marketplace:
+
+```sh
+# Add a skill package
+npx skills add <owner>/<repo>
+
+# Add it globally (user-level, not tied to this project)
+npx skills add <owner>/<repo> -g
+
+# List installed skills
+npx skills list      # project scope
+npx skills list -g   # global scope
+
+# Update skills to their latest versions
+npx skills update
+```
+
 ## Per-machine Overrides
 
 These files are not tracked — create them locally on each machine as needed:
