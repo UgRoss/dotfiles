@@ -13,9 +13,16 @@ rl_7d_reset=$(echo "$input" | jq -r '.rate_limits.seven_day.resets_at // empty')
 
 if [ -n "$used" ]; then
   used_display=$(printf "%.0f" "$used")
-  usage_str="${used_display}%"
 else
-  usage_str="0%"
+  used_display=0
+fi
+
+# If Claude Code didn't populate worktree.name, detect it from git (handles externally-created worktrees)
+if [ -z "$worktree" ]; then
+  git_dir=$(git rev-parse --git-dir 2>/dev/null)
+  case "$git_dir" in
+    */.git/worktrees/*) worktree=$(basename "$git_dir") ;;
+  esac
 fi
 
 if [ -n "$worktree" ]; then
@@ -63,6 +70,18 @@ make_bar() {
   printf "%s" "$bar"
 }
 
+context_color() {
+  pct="$1"
+  if [ "$pct" -ge 90 ]; then printf "%s" "$RED"
+  elif [ "$pct" -ge 70 ]; then printf "%s" "$YELLOW"
+  else printf "%s" "$GREEN"
+  fi
+}
+
+usage_color=$(context_color "$used_display")
+usage_bar=$(make_bar "$used_display")
+usage_str=$(printf "${usage_color}%s %s%%${RESET}" "$usage_bar" "$used_display")
+
 format_rl() {
   pct="$1"
   reset_ts="$2"
@@ -81,12 +100,29 @@ rate_limit_str=""
 rate_limit_str="${rate_limit_str}$(format_rl "$rl_5h_pct" "$rl_5h_reset" "5h")"
 # rate_limit_str="${rate_limit_str}$(format_rl "$rl_7d_pct" "$rl_7d_reset" "7d")"
 
+# Smart truncation: keep first N chars of prefix + "..." + last N chars of suffix
+# e.g. "site-generative-search-sandbox" → "site-gen...-sandbox"
+smart_truncate() {
+  str="$1"
+  max=20
+  if [ "${#str}" -le "$max" ]; then
+    printf "%s" "$str"
+    return
+  fi
+  # Split on last '-' to preserve the meaningful suffix segment
+  suffix="${str##*-}"
+  prefix="${str%-*}"
+  # Keep up to 8 chars of prefix, then "...", then the suffix
+  short_prefix=$(printf "%.8s" "$prefix")
+  printf "%s...-%s" "$short_prefix" "$suffix"
+}
+
 repo_root=$(cd "$current_dir" 2>/dev/null && git rev-parse --show-toplevel 2>/dev/null || echo "$current_dir")
-dir_display=$(basename "$repo_root")
+dir_display=$(smart_truncate "$(basename "$repo_root")")
 
 # Only show rate limits when data is present (Pro subscription) — absent on API/Bedrock accounts
 if [ -n "$rate_limit_str" ]; then
-  printf "🤖 %s | 🧠 %s | 💰 %s | ⏱️ %s\n📁 %s | 🌳 %s | 🌿 %s" "$model" "$usage_str" "$block_str" "$rate_limit_str" "$dir_display" "$worktree_str" "$git_str"
+  printf "🤖 %s | %s | 💰 %s | ⏱️ %s\n📁 %s | 🌳 %s | 🌿 %s" "$model" "$usage_str" "$block_str" "$rate_limit_str" "$dir_display" "$worktree_str" "$git_str"
 else
-  printf "🤖 %s | 🧠 %s | 💰 %s\n📁 %s | 🌳 %s | 🌿 %s" "$model" "$usage_str" "$block_str" "$dir_display" "$worktree_str" "$git_str"
+  printf "🤖 %s | %s | 💰 %s\n📁 %s | 🌳 %s | 🌿 %s" "$model" "$usage_str" "$block_str" "$dir_display" "$worktree_str" "$git_str"
 fi
