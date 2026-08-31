@@ -136,6 +136,10 @@ Quality tools are guardrails that help you, not barriers that block you.
 - Always use the `gh` CLI for GitHub-related tasks (issues, PRs, releases, repo info, CI checks, etc.)
 - Do not use web URLs or direct API calls when `gh` can do the job
 
+## Obsidian
+
+- Use `obsidian` CLI to read, search, and write to my vault programmatically. This gives you ability to interact with my knowledge base and memory in a structured way.
+
 ## Memory
 
 - Save memories proactively whenever something worth remembering comes up — preferences, decisions, project context, feedback. Don't be conservative about it.
