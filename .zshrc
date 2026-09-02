@@ -14,6 +14,13 @@ export NVM_DIR="$HOME/.nvm"
 # PATH
 export PATH="$HOME/.local/bin:$PATH"
 
+# Obsidian vault
+# Named directory: `cd ~vault`, tab-completion (`~vault/03<TAB>`), and the
+# prompt abbreviates the long iCloud path to `~vault`.
+hash -d vault="$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Personal"
+# `vault` jumps to the root; `vault 03 - Knowledge` jumps into a subdir.
+vault() { cd ~vault/"${*:-}"; }
+
 # Local overrides (not tracked in dotfiles)
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
 
