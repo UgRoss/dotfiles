@@ -101,6 +101,15 @@
       "skillFolderHash": "d8e341cee7980127dddda05159bedf25dc853615",
       "installedAt": "2026-08-06T13:20:41.991Z",
       "updatedAt": "2026-09-10T08:13:31.094Z"
+    },
+    "ponytail": {
+      "source": "dietrichgebert/ponytail",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/dietrichgebert/ponytail.git",
+      "skillPath": "skills/ponytail/SKILL.md",
+      "skillFolderHash": "cb6e53477eaf04e6daeca22feacb85f9ce20d40c",
+      "installedAt": "2026-09-10T10:37:21.425Z",
+      "updatedAt": "2026-09-10T10:37:21.425Z"
     }
   },
   "dismissed": {
@@ -108,14 +117,13 @@
   },
   "lastSelectedAgents": [
     "amp",
-    "antigravity",
-    "antigravity-cli",
     "cline",
     "codex",
     "cursor",
-    "deepagents",
+    "droid",
     "gemini-cli",
     "github-copilot",
+    "kilo",
     "kimi-code-cli",
     "opencode",
     "warp",
