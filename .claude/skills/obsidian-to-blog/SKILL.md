@@ -45,8 +45,8 @@ Any vault file whose **filename starts with `_`** is a draft — skip it entirel
 |---|---|---|
 | `date` | `pubDate` | Keep as-is (YYYY-MM-DD) |
 | H1 heading | `title` | Extract from `# Title` line |
-| `tags` like `til/devtools` | `category` | Take the part after `/`, title-case it |
-| First non-heading paragraph | `excerpt` | Optional; 1-sentence summary |
+| `tags` like `til/devtools` | `category` | Take the part after `/`, title-case it. Must match the `noteCategories` enum in `src/content.config.ts` (e.g. `macOS`, `CLI`); an unknown category fails the build, so add it there first |
+| First non-heading paragraph | `description` | Optional; 1-sentence summary |
 | `updated` | `updateDate` | Optional; keep if present |
 
 ### Content transform
@@ -71,7 +71,7 @@ Convert the H1 title to kebab-case: `"Bubble Sort"` → `bubble-sort.md`
 title: 'Bubble Sort'
 pubDate: 2020-11-01
 category: 'Algorithms'
-excerpt: 'A simple comparison-based sorting algorithm that bubbles largest elements to the end.'
+description: 'A simple comparison-based sorting algorithm that bubbles largest elements to the end.'
 ---
 
 [body content without Related section]
@@ -151,7 +151,7 @@ Kebab-case the title: `"Clean Code"` → `clean-code.md`
 |---|---|---|
 | `date` or H1 title | `pubDate` | Required |
 | `# Title` | `title` | From first H1 |
-| `excerpt` or `description` | `excerpt` | Optional |
+| `excerpt` or `description` | `description` | Optional |
 | `image` | `image` | See preview image rule below. Use `./_assets/<filename>` path |
 
 ### Preview image rule
