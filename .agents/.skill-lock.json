@@ -1,15 +1,32 @@
 {
   "version": 3,
   "skills": {
-    "humanizer": {
-      "source": "blader/humanizer",
+    "code-review": {
+      "source": "mattpocock/skills",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/blader/humanizer.git",
-      "skillPath": "SKILL.md",
-      "skillFolderHash": "225a6f39ac85f76ee48dbad772ea4abe4ed6c9d8",
-      "pluginName": "humanizer",
-      "installedAt": "2026-08-06T12:11:14.495Z",
-      "updatedAt": "2026-10-13T14:47:19.367Z"
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/code-review/SKILL.md",
+      "skillFolderHash": "a8ef561571acbb611de8ff19ba6da75b197c63a8",
+      "installedAt": "2026-08-06T13:20:41.991Z",
+      "updatedAt": "2026-11-01T14:44:48.383Z"
+    },
+    "codebase-design": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/codebase-design/SKILL.md",
+      "skillFolderHash": "4cbe1c131e1ea54109cb1e4e5f3c505810db6606",
+      "installedAt": "2026-08-06T13:20:41.990Z",
+      "updatedAt": "2026-11-01T14:44:46.373Z"
+    },
+    "domain-modeling": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/engineering/domain-modeling/SKILL.md",
+      "skillFolderHash": "ea30ee454ba264543dbe40737973b1a5afb9f0e6",
+      "installedAt": "2026-08-06T13:20:41.989Z",
+      "updatedAt": "2026-11-01T14:44:44.541Z"
     },
     "find-skills": {
       "source": "vercel-labs/skills",
@@ -19,34 +36,6 @@
       "skillFolderHash": "76a98a285cb0434f3d39e1a873823556330e398b",
       "installedAt": "2026-08-06T12:11:20.417Z",
       "updatedAt": "2026-08-06T12:11:20.417Z"
-    },
-    "teach": {
-      "source": "mattpocock/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/productivity/teach/SKILL.md",
-      "skillFolderHash": "3fd617b610e59acbb99644de1ef37e394ff53cd1",
-      "installedAt": "2026-08-06T12:57:57.154Z",
-      "updatedAt": "2026-10-13T14:47:21.996Z"
-    },
-    "pdf": {
-      "source": "anthropics/skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/anthropics/skills.git",
-      "skillPath": "skills/pdf/SKILL.md",
-      "skillFolderHash": "6369f4649de69bd6857c9bc3b058a77206009238",
-      "pluginName": "document-skills",
-      "installedAt": "2026-08-06T13:01:15.384Z",
-      "updatedAt": "2026-08-06T13:01:15.384Z"
-    },
-    "obsidian-cli": {
-      "source": "kepano/obsidian-skills",
-      "sourceType": "github",
-      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
-      "skillPath": "skills/obsidian-cli/SKILL.md",
-      "skillFolderHash": "96254a554e480359de7b685571876f2e7f9ba57d",
-      "installedAt": "2026-08-06T13:06:00.795Z",
-      "updatedAt": "2026-08-06T13:06:00.795Z"
     },
     "grill-me": {
       "source": "mattpocock/skills",
@@ -71,36 +60,38 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/mattpocock/skills.git",
       "skillPath": "skills/productivity/grilling/SKILL.md",
-      "skillFolderHash": "28aceb4c9567b985cb47f7db88cf23c9f33af8b8",
+      "skillFolderHash": "f551b6e0d219fdda0b6abf277f8f915b3127d1e9",
       "installedAt": "2026-08-06T13:20:41.989Z",
-      "updatedAt": "2026-10-13T14:47:24.016Z"
+      "updatedAt": "2026-11-01T14:44:43.053Z"
     },
-    "domain-modeling": {
-      "source": "mattpocock/skills",
+    "humanizer": {
+      "source": "blader/humanizer",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/engineering/domain-modeling/SKILL.md",
-      "skillFolderHash": "ea30ee454ba264543dbe40737973b1a5afb9f0e6",
-      "installedAt": "2026-08-06T13:20:41.989Z",
-      "updatedAt": "2026-10-13T14:47:26.054Z"
+      "sourceUrl": "https://github.com/blader/humanizer.git",
+      "skillPath": "SKILL.md",
+      "skillFolderHash": "0ef9fe5bc3572734fd3ae6c448fe00a30cd5dcf0",
+      "pluginName": "humanizer",
+      "installedAt": "2026-08-06T12:11:14.495Z",
+      "updatedAt": "2026-11-01T14:44:36.911Z"
     },
-    "codebase-design": {
-      "source": "mattpocock/skills",
+    "obsidian-cli": {
+      "source": "kepano/obsidian-skills",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/engineering/codebase-design/SKILL.md",
-      "skillFolderHash": "07ba1cd60efc12d0d3a083005c1d9651cf15e39a",
-      "installedAt": "2026-08-06T13:20:41.990Z",
-      "updatedAt": "2026-10-13T14:47:29.239Z"
+      "sourceUrl": "https://github.com/kepano/obsidian-skills.git",
+      "skillPath": "skills/obsidian-cli/SKILL.md",
+      "skillFolderHash": "96254a554e480359de7b685571876f2e7f9ba57d",
+      "installedAt": "2026-08-06T13:06:00.795Z",
+      "updatedAt": "2026-08-06T13:06:00.795Z"
     },
-    "code-review": {
-      "source": "mattpocock/skills",
+    "pdf": {
+      "source": "anthropics/skills",
       "sourceType": "github",
-      "sourceUrl": "https://github.com/mattpocock/skills.git",
-      "skillPath": "skills/engineering/code-review/SKILL.md",
-      "skillFolderHash": "fee7bb5fdddc069d58cbea09b2c36b5a859eac05",
-      "installedAt": "2026-08-06T13:20:41.991Z",
-      "updatedAt": "2026-10-13T14:47:32.177Z"
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/pdf/SKILL.md",
+      "skillFolderHash": "6369f4649de69bd6857c9bc3b058a77206009238",
+      "pluginName": "document-skills",
+      "installedAt": "2026-08-06T13:01:15.384Z",
+      "updatedAt": "2026-08-06T13:01:15.384Z"
     },
     "ponytail": {
       "source": "dietrichgebert/ponytail",
@@ -110,6 +101,15 @@
       "skillFolderHash": "db8acd3ce9e04ef4a5d42bbd90924b6d0a488318",
       "installedAt": "2026-09-10T10:37:21.425Z",
       "updatedAt": "2026-10-13T14:47:35.353Z"
+    },
+    "teach": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/mattpocock/skills.git",
+      "skillPath": "skills/productivity/teach/SKILL.md",
+      "skillFolderHash": "3fd617b610e59acbb99644de1ef37e394ff53cd1",
+      "installedAt": "2026-08-06T12:57:57.154Z",
+      "updatedAt": "2026-11-01T14:44:40.609Z"
     }
   },
   "dismissed": {
@@ -117,13 +117,14 @@
   },
   "lastSelectedAgents": [
     "amp",
+    "antigravity",
+    "antigravity-cli",
     "cline",
     "codex",
     "cursor",
-    "droid",
+    "deepagents",
     "gemini-cli",
     "github-copilot",
-    "kilo",
     "kimi-code-cli",
     "opencode",
     "warp",
