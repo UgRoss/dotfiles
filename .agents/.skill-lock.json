@@ -98,9 +98,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/dietrichgebert/ponytail.git",
       "skillPath": "skills/ponytail/SKILL.md",
-      "skillFolderHash": "db8acd3ce9e04ef4a5d42bbd90924b6d0a488318",
+      "skillFolderHash": "e8d3fa76e7ff9223a784dbd4bcfc9ff46b3fa55d",
       "installedAt": "2026-09-10T10:37:21.425Z",
-      "updatedAt": "2026-10-13T14:47:35.353Z"
+      "updatedAt": "2026-11-01T14:48:23.384Z"
     },
     "teach": {
       "source": "mattpocock/skills",
