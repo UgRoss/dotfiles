@@ -88,10 +88,9 @@
       "sourceType": "github",
       "sourceUrl": "https://github.com/anthropics/skills.git",
       "skillPath": "skills/pdf/SKILL.md",
-      "skillFolderHash": "6369f4649de69bd6857c9bc3b058a77206009238",
-      "pluginName": "document-skills",
+      "skillFolderHash": "4b1916c1b9362c466332fbd36108fab908801268",
       "installedAt": "2026-08-06T13:01:15.384Z",
-      "updatedAt": "2026-08-06T13:01:15.384Z"
+      "updatedAt": "2026-11-07T21:07:47.338Z"
     },
     "ponytail": {
       "source": "dietrichgebert/ponytail",
