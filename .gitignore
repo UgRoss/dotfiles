@@ -30,5 +30,5 @@ node_modules/
 # Claude app auto-synced skills (regenerated)
 .claude/skills/synced/
 
-# Personal voice data for the university-writing skill (kept local)
-.claude/skills/university-writing/voice/
+# Writing sample for the university-writing skill (kept local)
+.claude/skills/university-writing/voice/sample.md
